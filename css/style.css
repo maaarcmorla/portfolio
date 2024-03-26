@@ -1,0 +1,839 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+ ::after,
+ ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+}
+
+.p-10px {
+    padding: 10px;
+}
+
+.contenedor {
+    padding: 80px;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.current {
+    border-bottom: 2px solid #20bf6b;
+}
+
+.boxLogo {
+    display: flex;
+    justify-content: center;
+}
+
+.boxLogo h1>small {
+    color: #20bf6b;
+}
+
+#subir {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.irArriba {
+    display: block!important;
+    padding: 15px;
+    background: #20be6b;
+    border: 2px solid #20bf6b;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    bottom: 50px;
+    right: 2%;
+    z-index: 999;
+    transition: all 0.3s ease 0s!important;
+    transform: translateX(0);
+    animation: animacionScrollTo 0.7s ease-out;
+    opacity: 1!important;
+}
+
+.irArriba:hover {
+    background: transparent;
+    border: 2px solid #20bf6b;
+    transition: all 0.3s ease 0s;
+    color: #20bf6b;
+    padding: 15px;
+}
+
+@keyframes animacionScrollTo {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* ESTILOS HEADER */
+
+header {
+    height: 700px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/landingPage/images/cima-de-las-montanas-cubiertas-de-nieve_3840x2400_xtrafondos.com.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.5);
+    padding-top: 55px;
+}
+
+.boxHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 635px;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.boxHeader .textosHeader {
+    width: 42%;
+    position: relative;
+    left: 15%;
+    transform: translateY(0);
+    opacity: 1;
+    animation: animacion2 1s ease-out;
+}
+
+.boxHeader .textosHeader h1 {
+    font-size: 50px;
+    width: 80%;
+}
+
+.boxHeader .textosHeader p {
+    width: 65%;
+    color: #cccaca;
+    font-size: 16px;
+}
+
+a.botonGetStarted {
+    display: inline-block;
+    width: 135px;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    padding: 8px 20px;
+    background-color: #20bf6b;
+    border-radius: 35px;
+    border: 2px solid #20bf6b;
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
+    transition: all 0.3s ease 0s;
+}
+
+a.botonGetStarted:hover {
+    color: #20bf6b !important;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 15px 18px rgba(32, 191, 107, 0.4);
+    transform: translateY(-6px);
+}
+
+/* Typewriter effect 1 */
+@keyframes typing {
+    0.0000%, 27.3488% { content: ""; }
+    1.1395%, 26.2093% { content: "M"; }
+    2.2791%, 25.0698% { content: "Ma"; }
+    3.4186%, 23.9302% { content: "Mar"; }
+    4.5581%, 22.7907% { content: "Marc"; }
+
+    30.7674%, 51.2791% { content: ""; }
+    31.9070%, 50.1395% { content: "s"; }
+    33.0465%, 49.0000% { content: "st"; }
+    34.1860%, 47.8605% { content: "stu"; }
+    35.3256%, 46.7209% { content: "stud"; }
+    36.4651%, 45.5814% { content: "stude"; }
+    37.6047%, 44.4419% { content: "studen"; }
+    38.7442%, 43.3024% { content: "student"; }
+
+    54.6977%, 75.2093% { content: ""; }
+    55.8372%, 74.0698% { content: "c"; }
+    56.9767%, 72.9302% { content: "cl"; }
+    58.1163%, 71.7907% { content: "cle"; }
+    59.2558%, 70.6512% { content: "clea"; }
+    60.3953%, 69.5116% { content: "clean"; }
+
+    78.6279%, 96.8605% { content: ""; }
+    79.7674%, 95.7209% { content: "d"; }
+    80.9070%, 94.5814% { content: "de"; }
+    82.0465%, 93.4419% { content: "dev"; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+p{
+    color: #333333;
+}
+
+.typewriter {
+    --caret: currentcolor;
+}
+
+.typewriter::before {
+    content: "";
+    animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+    border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+    .typewriter::after {
+        animation: none;
+    }
+
+    @keyframes sequencePopup {
+        0%, 100% { content: "Marc"; }
+        25% { content: "student"; }
+        50% { content: "clean"; }
+        75% { content: "dev"; }
+    }
+
+    .typewriter::before {
+        content: "Marc";
+        animation: sequencePopup 12s linear infinite;   
+    }
+}
+
+
+.boxHeader .imgHeader {
+    right: -19%;
+    position: relative;
+}
+
+.imgHeader img {
+    width: 80%;
+    transform: translateX(0);
+    opacity: 1;
+    animation: animacion1 1s ease-out;
+}
+
+@keyframes animacion1 {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes animacion2 {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+/* ESTILOS FEATURES */
+
+.boxFeatures {
+    padding: 50px;
+    background-color: #f6f6f6;
+    height: 100vh;
+}
+
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.cardFeatures {
+    background: #ffffff;
+    width: 30%;
+    border-radius: 3px;
+    padding: 1.25rem;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+
+.cardFeatures span {
+    box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardFeatures a {
+    color: #02d2b5;
+}
+
+.cardFeatures:hover {
+    cursor: pointer;
+    transform: scale(0.9, 0.9);
+}
+
+.cardFeatures span {
+    background: #00d2b5;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+}
+
+.cardFeatures h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cardFeatures p {
+    font-size: 12px;
+    color: #9c9c9c;
+}
+
+
+/* ESTILOS CALL TO ACTION  */
+
+.boxCallToActions {
+    padding-top: 50px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.callToActions {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.imgCallToActions {
+    width: 50%;
+}
+
+.imgCallToActions img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.callToActions .contenido ul li {
+    list-style: none;
+    margin-bottom: 12px;
+    color: #9c9c9c;
+    font-size: 14px;
+}
+
+.contenido {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.contenido h3 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    margin-bottom: 40px;
+    width: 80%;
+    color: #9c9c9c;
+}
+
+.boxCardCallToActions {
+    background: #ffffff;
+    width: 38%;
+    border-radius: 3px;
+    padding: 1.25rem;
+    transition: 0.4s;
+    -webkit-box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    position: absolute;
+    margin-top: 35px;
+}
+
+.boxCardAnimated {
+    transform: translateX(0);
+    animation: animacion3 0.7s ease-out;
+    position: absolute;
+    opacity: 1;
+}
+
+@keyframes animacion3 {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.boxCardCallToActions img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.cardCallToActions .boxProfesional {
+    display: flex;
+}
+
+.boxProfesional .imgProfesional {
+    margin-right: 15px;
+}
+
+.boxProfesional .datosProfesional h5 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.boxProfesional .datosProfesional h6 {
+    font-size: 11px;
+}
+
+.cardCallToActions p {
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+
+/* ESTILOS ABOUT */
+
+.boxAbout {
+    padding: 50px;
+    background-color: #f6f6f6;
+    height: 100vh;
+}
+
+.about {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.imgAbout {
+    width: 45%;
+    -webkit-box-shadow: 1px 9px 15px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 9px 15px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 9px 15px -8px rgba(0, 0, 0, 0.75);
+}
+
+.imgAbout img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.contenidoAbout {
+    width: 55%;
+    padding-left: 12%;
+}
+
+.contenidoAbout h3 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contenidoAbout p {
+    margin-bottom: 10px;
+    width: 80%;
+    color: #9c9c9c;
+}
+
+
+/* ESTILOS SLIDER */
+
+.boxSlider {
+    overflow: hidden;
+    padding: 50px;
+    height: 80vh;
+}
+
+.centerSlider {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+}
+
+.sliderText {
+    width: 60%;
+    margin: 15px auto;
+    font-style: italic;
+    color: #9c9c9c;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    text-indent: 0px;
+    background-clip: padding-box;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-radius: 50px;
+}
+
+.carousel-indicators li {
+    background-color: #20bf6b;
+}
+
+.carousel-item {
+    background-color: white;
+}
+
+.carousel-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+
+/* ESTILOS CONTACTO */
+
+.boxContacto {
+    padding: 50px;
+    background-color: #f6f6f6;
+    height: 100%;
+}
+
+.contacto {
+    background: white;
+    padding: 50px 40px;
+    width: 42%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.botonEnviarMensaje {
+    display: inline-block;
+    width: 152px;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    padding: 8px 20px;
+    background-color: #20bf6b;
+    border-radius: 35px;
+    border: 2px solid #20bf6b;
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
+    transition: all 0.3s ease 0s;
+}
+
+.botonEnviarMensaje:hover {
+    color: #20bf6b !important;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 15px 18px rgba(32, 191, 107, 0.4);
+    transform: translateY(-6px);
+}
+
+.form-control {
+    font-size: 14px;
+}
+
+
+/*  ESTILOS FOOTER*/
+
+.footer {
+    background: white;
+    padding: 25px;
+}
+
+.boxTextFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxTextFooter p {
+    margin-bottom: 0;
+    color: #666666;
+}
+
+.boxTextFooter p a {
+    color: #666666;
+}
+
+.boxTextFooter p a:hover {
+    color: #20be6b;
+    transition: 0.4s;
+}
+
+.boxTextFooter span {
+    color: #20be6b;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:800px) {
+    .boxLogo {
+        display: none;
+    }
+    /* ESTILOS NAVBAR */
+    .navbar-brand {
+        display: block;
+    }
+    .nav-link:hover {
+        border-bottom: none;
+    }
+    .nav-item {
+        text-align: center;
+    }
+    .current {
+        border-bottom: 2px solid #f5f5f5;
+    }
+    /* ESTILOS HEADER */
+    header {
+        height: auto;
+    }
+    .boxHeader {
+        flex-wrap: wrap;
+        height: 900px;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .boxHeader .textosHeader {
+        width: 90%;
+        margin-bottom: 100px;
+        text-align: left;
+        left: 0;
+        margin: 0 auto;
+    }
+    .boxHeader h1 {
+        font-size: 40px;
+    }
+    .boxHeader .textosHeader h1 {
+        width: 100%;
+    }
+    .boxHeader .textosHeader p {
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .boxHeader .imgHeader {
+        width: 100%;
+        top: -40px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgHeader img {
+        width: 95%;
+    }
+    /* ESTILOS FEATURES */
+    .boxFeatures {
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .features {
+        width: 90%;
+    }
+    .cardFeatures {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    /* ESTILOS CALL TO ACTIONS */
+    .boxCallToActions {
+        height: 100%;
+    }
+    .imgCallToActions {
+        width: 100%;
+    }
+    .contenido {
+        width: 80%;
+        padding-left: 0px;
+    }
+    .contenido h3 {
+        text-align: center;
+    }
+    .contenido p {
+        width: 100%;
+        text-align: center;
+    }
+    .contenido ul {
+        text-align: center;
+    }
+    .boxCardAnimated {
+        position: relative;
+        right: 0vh;
+        transform: none;
+        animation: none;
+    }
+    .boxCardCallToActions {
+        width: 100%;
+        margin-top: 42px;
+    }
+    /* ESTILOS ABOUT */
+    .boxAbout {
+        height: 100%;
+    }
+    .about {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .imgAbout {
+        width: 100%;
+    }
+    .contenidoAbout {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .contenidoAbout h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .contenidoAbout p {
+        width: 100%;
+        text-align: center;
+    }
+    /* ESTILOS TESTIMONIAL */
+    .boxSlider {
+        height: 100%;
+    }
+    /* ESTILOS CONTACTO */
+    .contacto {
+        background: white;
+        width: 90%;
+        margin: 30px auto 0 auto;
+    }
+    /* ESTILOS FOOTER */
+    .boxContacto {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .boxLogo {
+        display: none;
+    }
+    .current {
+        border-bottom: 2px solid #f5f5f5;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    /* ESTILOS NAVBAR */
+    .navbar-brand {
+        display: block;
+    }
+    .nav-link:hover {
+        border-bottom: none;
+    }
+    .nav-item {
+        text-align: center;
+    }
+    /* ESTILOS HEADER */
+    .boxHeader {
+        height: 700px;
+    }
+    .boxHeader .textosHeader {
+        width: 90%;
+    }
+    .boxHeader h1 {
+        font-size: 25px;
+    }
+    .boxHeader h2 {
+        font-size: 20px;
+        font-weight: 300;
+    }
+    /* ESTILOS FEATURES */
+    .features {
+        width: 100%;
+    }
+    /* ESTILOS CALL TO ACTIONS */
+    .boxCallToActions {
+        height: 100%;
+    }
+    .boxCardAnimated {
+        position: relative;
+        right: 0vh;
+        transform: none;
+        animation: none;
+    }
+    /* ESTILOS ABOUT */
+    .about {
+        width: 100%;
+    }
+    /* ESTILOS CONTACTO */
+    .boxContacto {
+        padding: 50px 30px;
+    }
+    .contacto {
+        width: 100%;
+        margin: 0;
+    }
+    /* ESTILOS FOOTER */
+    footer {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
