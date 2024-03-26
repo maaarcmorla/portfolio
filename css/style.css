@@ -110,7 +110,7 @@ header {
     height: 700px;
     width: 100%;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/landingPage/images/cima-de-las-montanas-cubiertas-de-nieve_3840x2400_xtrafondos.com.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/cima-de-las-montanas-cubiertas-de-nieve_3840x2400_xtrafondos.com.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
