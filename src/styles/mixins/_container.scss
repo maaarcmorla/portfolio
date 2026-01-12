@@ -1,0 +1,11 @@
+/// @group mixins
+/// @name container
+
+@mixin container($type: "center") {
+  @if $type == "center" {
+    margin: 0 auto;
+    max-width: calc(84rem + calc(1.5rem * 2));
+  }
+
+  padding-inline: 1.5rem;
+}
