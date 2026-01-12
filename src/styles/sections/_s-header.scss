@@ -1,0 +1,25 @@
+/// @group sections
+/// @name header
+@use "../mixins/container" as mix;
+
+$name: "s-header";
+
+:root {
+  --#{$name}-title-color: rgb(41, 41, 41);
+
+  /// Dark theme
+  @media (prefers-color-scheme: dark) {
+    --#{$name}-title-color: white;
+  }
+}
+
+.#{$name} {
+  display: flex;
+  flex-flow: column;
+  
+  @include mix.container();
+
+  &-title {
+    color: var(--#{$name}-title-color);
+  }
+}
