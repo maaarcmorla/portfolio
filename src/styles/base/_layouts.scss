@@ -1,8 +1,18 @@
 /// @group base
 /// @name layouts
 
+:root {
+  --bg-color: white;
+
+  /// Dark theme
+  @media (prefers-color-scheme: dark) {
+    --bg-color: gray;
+  }
+}
+
 body {
   font-family: 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-color);
   margin: 0;
   padding: 0;
 }
