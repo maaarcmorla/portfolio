@@ -1,6 +1,6 @@
 /// @group sections
 /// @name header
-@use "../mixins/container" as mix;
+@use "../mixins" as mix;
 
 $name: "s-header";
 
@@ -13,6 +13,8 @@ $name: "s-header";
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 
     @include mix.container();
   }
@@ -24,12 +26,85 @@ $name: "s-header";
     }
   }
 
+  &__toggle-input {
+    display: none;
+
+    @include mix.breakpoint("tablet") {
+      &:checked ~ .#{$name}__list {
+        display: flex;
+      }
+
+      &:checked ~ .#{$name}__toggle .#{$name}__toggle-icon {
+        background: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: .25rem;
+    color: var(--color-text);
+
+    @include mix.breakpoint("tablet") {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__toggle-icon {
+    display: block;
+    width: 1.5rem;
+    height: .125rem;
+    background: currentColor;
+    position: relative;
+    transition: background .2s;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: .125rem;
+      background: currentColor;
+      position: absolute;
+      left: 0;
+      transition: transform .2s, top .2s;
+    }
+
+    &::before { top: -.45rem; }
+    &::after  { top:  .45rem; }
+  }
+
   &__list {
     display: flex;
     gap: 1rem;
 
+    @include mix.breakpoint("tablet") {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 0;
+      border-top: .125rem solid var(--color-border);
+      padding-top: 1rem;
+    }
+
     &-text {
       color: var(--color-text);
+      padding-block: .25rem;
 
       &:hover {
         color: var(--color-text-muted);
