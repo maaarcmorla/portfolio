@@ -1,0 +1,61 @@
+---
+interface Props {
+  limit?: number;
+}
+
+const { limit } = Astro.props;
+
+const projects = [
+  {
+    title: "Fitness App",
+    description: "Aplicación de seguimiento de entrenamientos y hábitos saludables.",
+    img: "",
+    alt: "Captura de Fitness App",
+  },
+  {
+    title: "Portfolio",
+    description: "Portfolio personal desarrollado con Astro y SCSS.",
+    img: "",
+    alt: "Captura de Portfolio",
+  },
+  {
+    title: "E-commerce",
+    description: "Tienda online con carrito de compra y pasarela de pago.",
+    img: "",
+    alt: "Captura de E-commerce",
+  },
+  {
+    title: "Blog",
+    description: "Blog estático con sistema de posts en Markdown.",
+    img: "",
+    alt: "Captura de Blog",
+  },
+  {
+    title: "Dashboard",
+    description: "Panel de administración con gráficas y gestión de usuarios.",
+    img: "",
+    alt: "Captura de Dashboard",
+  },
+];
+
+const visibleProjects = limit ? projects.slice(0, limit) : projects;
+---
+
+<section class="s-grid">
+  <div class="s-grid__container">
+    <h2 class="s-grid__title">Mis proyectos</h2>
+    <div class="s-grid__grid">
+      {visibleProjects.map((project) => (
+        <div class="c-portfolio-card">
+          <div class="c-portfolio-card__img">
+            <img src={project.img} alt={project.alt} />
+          </div>
+          <div class="c-portfolio-card__content">
+            <h3 class="c-portfolio-card__content--title">{project.title}</h3>
+            <p class="c-portfolio-card__content--text">{project.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

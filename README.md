@@ -1,46 +1,57 @@
-# Astro Starter Kit: Basics
+# 🚀 Portfolio – Marc Morlá
 
-```sh
-npm create astro@latest -- --template basics
+Mi portfolio personal como desarrollador frontend, creado con **Astro** y desplegado en **GitHub Pages**.  
+Un espacio donde muestro mis proyectos, habilidades y forma de trabajar.
+
+🌍 **Live demo:**  
+👉 https://maaarcmorla.github.io/portfolio/
+
+
+## ✨ Características
+
+- ⚡ **Astro**
+- 🎨 **Diseño limpio y moderno**
+- 🌍 **Soporte multi-idioma** (ES / EN)
+- 📱 **Responsive** (mobile-first)
+- 🚀 **Deploy automático con GitHub Actions**
+- 🔍 **SEO-friendly**
+
+
+## 🛠️ Tecnologías utilizadas
+
+- **Astro**
+- **TypeScript**
+- **Sass / CSS**
+- **GitHub Pages**
+- **GitHub Actions**
+
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├─ pages/
+│ ├─ es/
+│ │ └─ index.astro
+│ └─ en/
+│   └─ index.astro
+├─ components/
+├─ assets/
+│ └─ icons/
+├─ i18n/
+│ ├─ es.json
+│ └─ en.json
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🌍 Internacionalización (i18n)
 
-## 🚀 Project Structure
+El portfolio está preparado para múltiples idiomas usando rutas dedicadas:
 
-Inside of your Astro project, you'll see the following folders and files:
+- `/portfolio/es/` → Español  
+- `/portfolio/en/` → English  
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Los textos se gestionan mediante archivos JSON para facilitar el mantenimiento y la escalabilidad.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🚀 Deploy
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+El proyecto se despliega automáticamente en **GitHub Pages** usando **GitHub Actions** cada vez que se hace push a la rama principal.

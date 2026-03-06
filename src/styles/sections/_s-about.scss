@@ -1,0 +1,51 @@
+/// @group sections
+/// @name about
+@use "../mixins" as mix;
+
+$name: "s-about";
+
+.#{$name} {
+  padding-block: 3rem;
+
+  &__container {
+    @include mix.container();
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__intro {
+    &-title {
+      margin-bottom: .75rem;
+    }
+
+    &-text {
+      max-width: 42rem;
+    }
+  }
+
+  &__block {
+    &-title {
+      margin-bottom: .75rem;
+    }
+
+    &-text {
+      max-width: 42rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 2rem;
+
+    &-item {
+      &::before {
+        content: "— ";
+      }
+    }
+  }
+}

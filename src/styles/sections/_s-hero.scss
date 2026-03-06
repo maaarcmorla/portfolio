@@ -1,0 +1,21 @@
+/// @group sections
+/// @name hero
+@use "../mixins/container" as mix;
+
+$name: "s-hero";
+
+.#{$name} {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-surface);
+  border-bottom: .125rem solid var(--color-border);
+  min-height: 25rem;
+
+  &__container {
+    @include mix.container();
+  }
+
+  &__info {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,20 @@
+/// @group mixins
+/// @name breakpoint
+@use "sass:map";
+
+$breakpoints: (
+  "tablet-small": 30rem,
+  "tablet": 48rem,
+  "desktop": 64rem,
+  "desktop-large": 90rem,
+);
+
+@mixin breakpoint($point) {
+  @if map.has-key($breakpoints, $point) {
+    $value: map.get($breakpoints, $point);
+
+    @media (max-width: ($value)) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+/// @group components
+/// @name portfolio-card
+@use "../mixins/container" as mix;
+
+$name: "c-portfolio-card";
+
+:root {
+  --c-portfolio-card-border-color: var(--gray-300);
+
+  /// Dark theme
+  @media (prefers-color-scheme: dark) {
+    --c-portfolio-card-border-color: var(--gray-500);
+  }
+}
+
+.#{$name} {
+  border: 1px solid var(--c-portfolio-card-border-color);
+  padding: 1rem;
+
+
+  &__content {
+    &--title {
+      margin: 0;
+    }
+
+  }
+}
