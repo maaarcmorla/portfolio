@@ -1,6 +1,5 @@
 /// @group components
 /// @name portfolio-card
-@use "../mixins/container" as mix;
 
 $name: "c-portfolio-card";
 
@@ -15,10 +14,23 @@ $name: "c-portfolio-card";
 
 .#{$name} {
   border: 1px solid var(--c-portfolio-card-border-color);
-  padding: 1rem;
+  border-radius: .5rem;
 
+  &__img {
+    overflow: hidden;
+    border-radius: .5rem .5rem 0 0;
+
+    img {
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+      display: block;
+    }
+  }
 
   &__content {
+    padding: 1rem;
+
     &--title {
       margin: 0;
     }

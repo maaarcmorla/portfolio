@@ -1,5 +1,15 @@
 ---
 import "../styles/_index.scss"
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Marc Morlá Isern",
+  description = "Portfolio personal, desarrollador web."
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -7,10 +17,10 @@ import "../styles/_index.scss"
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Portfolio personal, desarrollador web." />
+		<meta name="description" content={description} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Marc Morlá Isern</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />

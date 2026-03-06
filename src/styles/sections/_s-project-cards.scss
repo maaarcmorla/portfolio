@@ -1,15 +1,8 @@
 /// @group sections
-/// @name grid
+/// @name project-cards
 @use "../mixins" as mix;
 
-$name: "s-grid";
-
-:root {
-
-  /// Dark theme
-  @media (prefers-color-scheme: dark) {
-  }
-}
+$name: "s-project-cards";
 
 .#{$name} {
   &__container {
@@ -31,6 +24,11 @@ $name: "s-grid";
 
     @include mix.breakpoint("tablet-small") {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mix.breakpoint("mobile") {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
 
   }

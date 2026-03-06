@@ -40,5 +40,10 @@ $name: "s-footer";
     }
   }
 
-  &__logo {}
+  &__logo {
+    img {
+      height: 2.5rem;
+      width: auto;
+    }
+  }
 }

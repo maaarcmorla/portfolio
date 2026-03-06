@@ -17,7 +17,12 @@ $name: "s-header";
     @include mix.container();
   }
 
-  &__logo {}
+  &__logo {
+    img {
+      height: 2.5rem;
+      width: auto;
+    }
+  }
 
   &__list {
     display: flex;

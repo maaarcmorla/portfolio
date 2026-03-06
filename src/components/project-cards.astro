@@ -1,4 +1,6 @@
 ---
+import testImg from '../assets/pexels-apasaric-1527934.jpg';
+
 interface Props {
   limit?: number;
 }
@@ -9,31 +11,31 @@ const projects = [
   {
     title: "Fitness App",
     description: "Aplicación de seguimiento de entrenamientos y hábitos saludables.",
-    img: "",
+    img: testImg.src,
     alt: "Captura de Fitness App",
   },
   {
     title: "Portfolio",
     description: "Portfolio personal desarrollado con Astro y SCSS.",
-    img: "",
+    img: testImg.src,
     alt: "Captura de Portfolio",
   },
   {
     title: "E-commerce",
     description: "Tienda online con carrito de compra y pasarela de pago.",
-    img: "",
+    img: testImg.src,
     alt: "Captura de E-commerce",
   },
   {
     title: "Blog",
     description: "Blog estático con sistema de posts en Markdown.",
-    img: "",
+    img: testImg.src,
     alt: "Captura de Blog",
   },
   {
     title: "Dashboard",
     description: "Panel de administración con gráficas y gestión de usuarios.",
-    img: "",
+    img: testImg.src,
     alt: "Captura de Dashboard",
   },
 ];
@@ -41,10 +43,10 @@ const projects = [
 const visibleProjects = limit ? projects.slice(0, limit) : projects;
 ---
 
-<section class="s-grid">
-  <div class="s-grid__container">
-    <h2 class="s-grid__title">Mis proyectos</h2>
-    <div class="s-grid__grid">
+<section class="s-project-cards">
+  <div class="s-project-cards__container">
+    <h2 class="s-project-cards__title">Mis proyectos</h2>
+    <div class="s-project-cards__grid">
       {visibleProjects.map((project) => (
         <div class="c-portfolio-card">
           <div class="c-portfolio-card__img">
