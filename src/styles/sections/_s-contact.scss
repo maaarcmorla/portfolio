@@ -51,7 +51,7 @@ $name: "s-contact";
 
     &-submit {
       background-color: var(--#{$name}-button-color);
-      border: 1px solid var(--#{$name}-border-color);
+      border: .0625rem solid var(--#{$name}-border-color);
       border-radius: .5rem;
       padding: 1rem 1.5rem;
       text-transform: uppercase;

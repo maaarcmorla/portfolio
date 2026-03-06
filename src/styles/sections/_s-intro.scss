@@ -1,0 +1,33 @@
+/// @group sections
+/// @name intro
+@use "../mixins" as mix;
+
+$name: "s-intro";
+
+.#{$name} {
+  border-bottom: .125rem solid var(--color-border);
+
+  &__container {
+    @include mix.container();
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding-block: 0 1rem;
+  }
+
+  &__label {
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--color-text-muted);
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+    max-width: 42rem;
+  }
+}

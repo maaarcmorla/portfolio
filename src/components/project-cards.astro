@@ -20,24 +20,6 @@ const projects = [
     img: testImg.src,
     alt: "Captura de Portfolio",
   },
-  {
-    title: "E-commerce",
-    description: "Tienda online con carrito de compra y pasarela de pago.",
-    img: testImg.src,
-    alt: "Captura de E-commerce",
-  },
-  {
-    title: "Blog",
-    description: "Blog estático con sistema de posts en Markdown.",
-    img: testImg.src,
-    alt: "Captura de Blog",
-  },
-  {
-    title: "Dashboard",
-    description: "Panel de administración con gráficas y gestión de usuarios.",
-    img: testImg.src,
-    alt: "Captura de Dashboard",
-  },
 ];
 
 const visibleProjects = limit ? projects.slice(0, limit) : projects;
@@ -45,7 +27,7 @@ const visibleProjects = limit ? projects.slice(0, limit) : projects;
 
 <section class="s-project-cards">
   <div class="s-project-cards__container">
-    <h2 class="s-project-cards__title">Mis proyectos</h2>
+    {limit && <h2 class="s-project-cards__title">Proyectos</h2>}
     <div class="s-project-cards__grid">
       {visibleProjects.map((project) => (
         <div class="c-portfolio-card">

@@ -1,0 +1,31 @@
+/// @group sections
+/// @name page-header
+@use "../mixins" as mix;
+
+$name: "s-page-header";
+
+.#{$name} {
+  border-bottom: .125rem solid var(--color-border);
+
+  &__container {
+    @include mix.container();
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-block: 2rem 1.5rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-text);
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+}
